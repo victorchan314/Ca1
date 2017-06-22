@@ -1,0 +1,9 @@
+{
+    "manifest_version": 2,
+
+    "name": "Ca1",
+    "description": "Replaces all occurrences of the word 'Berkeley' with 'The Number One Public University in the World'.",
+    "version": "1.0",
+
+
+}
