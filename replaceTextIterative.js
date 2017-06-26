@@ -1,7 +1,11 @@
-function replaceText() {
-    var elements = document.getElementsByTagName("*");
+function replaceText(element) {
+    var elements = element.childNodes;
     for (var i = 0; i<elements.length; i++) {
-        elements[i].innerText = elements[i].innerText.replace(/uc berkeley|ucberkeley|berkeley| cal /gi, "The Number One Public University in the World");
+        if (elements[i].nodeType == 3) {
+            elements[i].nodeValue = elements[i].nodeValue.replace(/uc berkeley|ucberkeley|berkeley| cal /gi, "The Number One Public University in the World");
+        } else {
+            replaceText(elements[i];
+        }
     }
 }
-window.onload = replaceText();
+window.onload = replaceText(document.body);
